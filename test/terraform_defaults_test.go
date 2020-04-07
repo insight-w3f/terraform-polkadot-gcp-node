@@ -37,6 +37,8 @@ func TestTerraformDefaults(t *testing.T) {
 			"gcp_project": projectID,
 			"gcp_region": region,
 			"vpc_name": "test",
+			"public_key_path": publicKeyPath,
+			"private_key_path": privateKeyPath,
 		},
 	}
 
