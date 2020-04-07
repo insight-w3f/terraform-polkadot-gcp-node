@@ -22,3 +22,8 @@ resource "google_compute_address" "this" {
   count = var.create_eip && var.create ? 1 : 0
   name  = "sentry-${count.index}"
 }
+
+data "google_compute_image" "ubuntu" {
+  family  = "ubuntu-minimal-1804-lts"
+  project = "ubuntu-os-cloud"
+}
