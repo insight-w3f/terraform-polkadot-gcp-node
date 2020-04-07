@@ -1,7 +1,8 @@
-# terraform-polkadot-gcp-sentry-node
+# terraform-polkadot-gcp-node
 
-![open-issues](https://img.shields.io/github/issues-raw/insight-w3f/terraform-polkadot-gcp-network?style=for-the-badge)
-![open-pr](https://img.shields.io/github/issues-pr-raw/insight-w3f/terraform-polkadot-gcp-network?style=for-the-badge)
+[![open-issues](https://img.shields.io/github/issues-raw/insight-w3f/terraform-polkadot-gcp-node?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-gcp-node/issues)
+[![open-pr](https://img.shields.io/github/issues-pr-raw/insight-w3f/terraform-polkadot-gcp-node?style=for-the-badge)](https://github.com/insight-w3f/terraform-polkadot-gcp-node/pulls)
+[![build-status](https://img.shields.io/circleci/build/github/insight-w3f/terraform-polkadot-gcp-node?style=for-the-badge)](https://circleci.com/gh/insight-w3f/terraform-polkadot-gcp-node)
 
 ## Features
 
@@ -15,13 +16,13 @@ For Terraform v0.12.0+
 
 ```
 module "this" {
-    source = "github.com/insight-w3f/terraform-polkadot-gcp-sentry-node"
+    source = "github.com/insight-w3f/terraform-polkadot-gcp-node"
 
 }
 ```
 ## Examples
 
-- [defaults](https://github.com/insight-w3f/terraform-polkadot-gcp-sentry-node/tree/master/examples/defaults)
+- [defaults](https://github.com/insight-w3f/terraform-polkadot-gcp-node/tree/master/examples/defaults)
 
 ## Known  Issues
 No issue is creating limit on this module.
