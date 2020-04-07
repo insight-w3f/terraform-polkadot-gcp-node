@@ -1,5 +1,8 @@
 # terraform-polkadot-gcp-sentry-node
 
+![open-issues](https://img.shields.io/github/issues-raw/insight-w3f/terraform-polkadot-gcp-network?style=for-the-badge)
+![open-pr](https://img.shields.io/github/issues-pr-raw/insight-w3f/terraform-polkadot-gcp-network?style=for-the-badge)
+
 ## Features
 
 This module...
@@ -12,18 +15,29 @@ For Terraform v0.12.0+
 
 ```
 module "this" {
-    source = "github.com/shinyfoil/terraform-polkadot-gcp-sentry-node"
+    source = "github.com/insight-w3f/terraform-polkadot-gcp-sentry-node"
 
 }
 ```
 ## Examples
 
-- [defaults](https://github.com/shinyfoil/terraform-polkadot-gcp-sentry-node/tree/master/examples/defaults)
+- [defaults](https://github.com/insight-w3f/terraform-polkadot-gcp-sentry-node/tree/master/examples/defaults)
 
 ## Known  Issues
 No issue is creating limit on this module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+No provider.
+
+## Inputs
+
+No input.
+
+## Outputs
+
+No output.
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
