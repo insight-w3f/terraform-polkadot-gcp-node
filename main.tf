@@ -12,6 +12,12 @@ module "label" {
   stage       = var.stage
 }
 
+module "user_data" {
+  source         = "github.com/insight-w3f/terraform-polkadot-user-data.git?ref=master"
+  cloud_provider = "gcp"
+  type           = "library"
+}
+
 resource "google_compute_address" "this" {
   count = var.create_eip && var.create ? 1 : 0
   name  = "sentry-${count.index}"
