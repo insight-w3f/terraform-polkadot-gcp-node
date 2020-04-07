@@ -11,3 +11,8 @@ module "label" {
   namespace   = var.namespace
   stage       = var.stage
 }
+
+resource "google_compute_address" "this" {
+  count = var.create_eip && var.create ? 1 : 0
+  name  = "sentry-${count.index}"
+}

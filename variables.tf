@@ -1,3 +1,8 @@
+variable "create" {
+  description = "Boolean to make module or not"
+  type        = bool
+  default     = true
+}
 
 ########
 # Label
@@ -36,4 +41,13 @@ variable "zone" {
   description = "The GCP zone to deploy in"
   type        = string
   default     = "us-east1-b"
+}
+
+#####
+# Instance
+#####
+variable "create_eip" {
+  description = "Boolean to create elastic IP"
+  type        = bool
+  default     = false
 }
