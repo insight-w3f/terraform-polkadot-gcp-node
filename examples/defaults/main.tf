@@ -1,6 +1,6 @@
 
 module "network" {
-  source   = "github.com/insight-w3f/terraform-polkadot-gcp-network.git?ref=split-vpc"
+  source   = "github.com/insight-w3f/terraform-polkadot-gcp-network.git?ref=master"
   vpc_name = "cci-test"
   project  = var.gcp_project
   region   = var.gcp_region
