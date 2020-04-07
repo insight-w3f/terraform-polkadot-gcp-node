@@ -76,3 +76,29 @@ resource "google_compute_instance" "this" {
     subnetwork = var.private_subnet_id
   }
 }
+
+module "ansible" {
+  source = "github.com/insight-infrastructure/terraform-aws-ansible-playbook.git"
+
+  inventory_template = "${path.module}/ansible_inventory.tpl"
+
+  inventory_template_vars = {
+    node-ip   = google_compute_address.this[0].address
+    node-name = var.node_name
+
+    wireguard_validator_pubkey = var.wireguard_validator_pubkey
+    validator_vpn_peer_addr    = var.validator_vpn_peer_addr
+    validator_ip               = var.validator_ip
+  }
+
+  playbook_file_path = "${path.module}/ansible/main.yml"
+
+  playbook_vars = {
+    node_exporter_enabled = false
+  }
+
+  user             = "ubuntu"
+  private_key_path = var.private_key_path
+
+  module_depends_on = google_compute_instance.this
+}
