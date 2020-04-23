@@ -11,12 +11,14 @@ module "network" {
 
 
 module "defaults" {
-  source            = "../.."
-  private_subnet_id = module.network.public_subnets[0]
-  public_subnet_id  = module.network.private_subnets[0]
-  security_group_id = module.network.sentry_security_group_id[0]
-  public_key_path   = var.public_key_path
-  private_key_path  = var.private_key_path
+  source                 = "../.."
+  relay_node_ip          = "1.2.3.4"
+  relay_node_p2p_address = "abcdefg"
+  private_subnet_id      = module.network.private_subnets[0]
+  public_subnet_id       = module.network.public_subnets[0]
+  security_group_id      = module.network.sentry_security_group_id[0]
+  public_key_path        = var.public_key_path
+  private_key_path       = var.private_key_path
 
   create           = true
   create_eip       = true
