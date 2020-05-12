@@ -42,6 +42,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| chain | Which Polkadot chain to join | `string` | `"kusama"` | no |
 | create | Boolean to make module or not | `bool` | `true` | no |
 | create\_eip | Boolean to create elastic IP | `bool` | `false` | no |
 | environment | The environment | `string` | `""` | no |
@@ -51,10 +52,14 @@ No requirements.
 | monitoring | Boolean for cloudwatch | `bool` | `false` | no |
 | namespace | The namespace to deploy into | `string` | `""` | no |
 | network\_name | The network name, ie kusama / mainnet | `string` | `""` | no |
+| node\_exporter\_hash | SHA256 hash of Node Exporter binary | `string` | `"b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424"` | no |
 | node\_exporter\_password | Password for node exporter | `string` | `"node_exporter_password"` | no |
+| node\_exporter\_url | URL to Node Exporter binary | `string` | `"https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz"` | no |
 | node\_exporter\_user | User for node exporter | `string` | `"node_exporter_user"` | no |
 | node\_name | Name of the node | `string` | `""` | no |
 | owner | Owner of the infrastructure | `string` | `""` | no |
+| polkadot\_client\_hash | SHA256 hash of Polkadot client binary | `string` | `"c34d63e5d80994b2123a3a0b7c5a81ce8dc0f257ee72064bf06654c2b93e31c9"` | no |
+| polkadot\_client\_url | URL to Polkadot client binary | `string` | `"https://github.com/w3f/polkadot/releases/download/v0.7.32/polkadot"` | no |
 | private\_key\_path | The path to the private ssh key | `string` | `""` | no |
 | private\_subnet\_id | The id of the private subnet | `string` | n/a | yes |
 | project | Name of the project for node name | `string` | `"project"` | no |
